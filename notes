@@ -1,0 +1,5 @@
+git status - shows the current status of your code
+git init- initializes a new repository
+git add .- adds all folders and files to the git repo
+git add [file path/folder path] - adds specific files or folders to the git repo
+ git commit - am[ name of commit]- commits the added folders/files to the git repo
