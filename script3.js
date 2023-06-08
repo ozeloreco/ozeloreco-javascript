@@ -42,14 +42,100 @@ let femaleStudents = studentsArray.filter (x => x.sex=== 'f');
 console.log(femaleStudents);
 
  //map 
+ const numbers =[1, 2, 3, 4, 5];
+ const numbersDouble = numbers.map(multiply);
+// function double(value, index, arr) {
+ //   return value*2;
+
+ //}
+ function multiply(value, index, arr) {
+    return value*index
+ }
+ console.log(numbersDouble);
+
+ const products =[
+    {
+        name: 'laptop',
+        price: 2000,
+        count: 7
+    },
+    {
+        name: 'desktop',
+        price: 2500,
+        count: 6
+    },
+    {
+        name: 'phone',
+        price: 850,
+        count: 12
+    }
+ ];
+ const totalProductsValue = products.map(item=>  ({
+    name:item.name,
+   totalValue: item.price * item.count}));
+ console.log(totalProductsValue);
+
+ const students =[
+    {
+        name: 'Elvis',
+        gender: 'male',
+        age: 24,
+        rating: 9
+    },
+    {
+        name: 'Mary',
+        gender: 'female',
+        age: 9,
+        rating: 16
+    },
+    {
+        name: 'Collins',
+        gender: 'male',
+        age: 4,
+        rating: 4
+    },
+    {
+        name: 'Martha',
+        gender: 'female',
+        exam: 9,
+        test: 9
+    }
+    
+ ]
+ const totalNumberStudents= students.map(x=> 
+    ({
+        name:x.name,
+        totalStudentsValue: x.exam * x.test
+    }));
+ console.log(totalNumberStudents);
+
+ const persons =[
+    {
+        firstname: 'Elvis', lastname: 'Okezuonu'
+    },
+    {
+        firstname: 'Victor', lastname: 'Okeke'
+    },
+    {
+        firstname: 'Maris', lastname: 'Okezuonu'
+    }
+
+ ];
+ persons.map(getFullName);
+
+ function getFullName (x){
+    return [x.firstname, x.lastname].join('');
+ }
+console.log(persons);
+ 
  
 // Function
 function doSomething () {
 //write the code you want the function to work
 };
-const doSomething = () => {
+//const doSomething = () => {
 //write the code you want the function to run
-};
+//};
 function addNumbers (x,y,z) {
     console.log(x*y*z);
 
@@ -60,7 +146,9 @@ function pythagoras(opp,adj){
     //1st method
     console.log(opp**2 + adj**2 **0.5);
     //2nd method
-    console.log()
-}
+   // console.log(Math.sqrt( opp**2 + adj**2));
+};
+pythagoras (3,4);
+pythagoras (7,24);
 
  //Push 
